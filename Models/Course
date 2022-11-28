@@ -9,7 +9,7 @@ const Course = new Schema({
     },
     courseCredits:
     {
-        type: Number,
+        type: String,
         required: true
     },
     courseID:
@@ -24,7 +24,7 @@ const Course = new Schema({
     },
     dateEntered:
     {
-        type: Date,
+        type: String,
         required: true
     }
 });

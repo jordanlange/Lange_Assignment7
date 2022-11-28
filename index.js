@@ -69,7 +69,7 @@ app.post('/addStudent', async (req, res) => {
 app.get('/getAllStudents', async (req, res) => {
     try {
         let students = await Student.find({}).lean();
-        return res.status(200).json(students);
+        return res.status(200).json({"students": students});
     } catch {
         return res.status(500).json('message: failed to get students');
     }
@@ -118,7 +118,7 @@ app.post('/addCourse', async (req, res) => {
 app.get('/getAllCourses', async (req, res) => {
     try {
         let courses = await Course.find({}).lean();
-        return res.status(200).json(courses);
+        return res.status(200).json({"courses": courses});
     } catch {
         return res.status(500).json('message: failed to get courses');
     }
